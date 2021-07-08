@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -70,6 +71,21 @@ body {
   text-align: center;
 }
 
+.btn-slider {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+}
+.btn-slider:hover {
+  color: #222;
+}
+.btn-slider:focus {
+  outline: none;
+}
+
 .padding-right {
   padding-right: 10rem;
 }
@@ -86,6 +102,22 @@ body {
 }
 .text-clamp--2 {
   -webkit-line-clamp: 2;
+}
+
+.arrow__btn-up {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  display: none;
+  color: #fff;
+  background-color: rgba(243, 11, 11, 0.6);
 }
 
 .header__top-bar {
@@ -116,6 +148,71 @@ body {
 }
 .header__menu-link:hover {
   color: #ffc87a;
+}
+
+.slider {
+  overflow: hidden;
+}
+.slider__container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.slider__left {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.slider__left > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.slider__left h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+.slider__right {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+.slider__right > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.slider__action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 1;
+}
+.slider__down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.slider__up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .banner__inner {

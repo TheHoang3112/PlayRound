@@ -1,0 +1,147 @@
+@media (min-width: 63.9375em) {
+  .navigation {
+    display: none;
+  }
+
+  .banner {
+    display: none;
+  }
+}
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .slider {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+@media (max-width: 46.25em) {
+  .header__menu-list {
+    display: none;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .banner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .banner__heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .banner__desc {
+    font-size: 1.6rem;
+  }
+  .banner__buttons > .btn {
+    font-size: 1.4rem;
+  }
+  .banner__title {
+    font-size: 3rem;
+  }
+
+  .category__item {
+    width: calc(50% - 22.5px);
+    margin-bottom: 2.5rem;
+  }
+  .category__image {
+    height: 15rem;
+  }
+
+  .category__item {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  .category__image {
+    height: 15rem;
+  }
+
+  .partner {
+    margin-bottom: 5rem;
+  }
+  .partner__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .partner__item {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .partner__item img {
+    margin: 0 auto;
+  }
+
+  .feature__inner {
+    padding-top: 0;
+  }
+  .feature__title {
+    font-size: 2rem;
+  }
+  .feature__item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8rem;
+  }
+  .feature__item:nth-child(even) {
+    flex-direction: column;
+  }
+  .feature__item:nth-child(even) .feature__info {
+    padding: 0;
+  }
+  .feature__item:nth-child(odd) .feature__info {
+    padding: 0;
+  }
+  .feature__image, .feature__info {
+    width: 100%;
+  }
+  .feature__image img {
+    margin: 0 auto 5rem;
+  }
+  .feature-intro__item {
+    z-index: -1;
+  }
+  .feature-best__item {
+    z-index: -1;
+  }
+
+  .connect {
+    margin-bottom: 5rem;
+  }
+  .connect__list {
+    flex-wrap: wrap;
+  }
+  .connect__item {
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+  }
+
+  .subscribe__container {
+    flex-direction: column;
+  }
+  .subscribe__title {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .subscribe__info {
+    width: 100%;
+  }
+  .subscribe__inner {
+    flex-direction: column;
+  }
+
+  .footer__container {
+    flex-wrap: wrap;
+  }
+  .footer__item {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .footer__inner {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

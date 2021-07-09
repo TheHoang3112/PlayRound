@@ -102,6 +102,17 @@ body {
         -webkit-line-clamp: 2;
     }
 }
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    &.visible {
+        transform: translateX(0);
+    }
+}
 
 @mixin flex($justify: flex-start, $align: flex-start, $wrap: nowrap, $dir: row) {
     display: flex;
@@ -109,6 +120,68 @@ body {
     align-items: $align;
     flex-wrap: $wrap;
     flex-direction: $dir;
+}
+.navigation {
+    &__btn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    &__open-btn {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    &__close-btn {
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        opacity: 0.3;
+    }
+    &__black {
+        background-color: $primary-color;
+        width: 60%;
+        max-width: 480px;
+        min-width: 320px;
+        transition-delay: 0.4s;
+        &.visible {
+            transition-delay: 0s;
+        }
+    }
+    &__red {
+        background-color: #77bbda;
+        width: 95%;
+        transition-delay: 0.2s;
+        &.visible {
+            transition-delay: 0.2s;
+        }
+    }
+    &__white {
+        background-color: #fff;
+        width: 95%;
+        padding: 40px;
+        position: relative;
+        transition-delay: 0s;
+        &.visible {
+            transition-delay: 0.4s;
+        }
+    }
+    &__list {
+        padding: 0;
+        li {
+            margin: 20px 0;
+        }
+        li a {
+            color: rgb(34, 31, 31);
+            font-size: 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    }
 }
 .arrow__btn-up {
     position: fixed;
@@ -537,135 +610,135 @@ body {
         font-weight: 600;
     }
 }
-@media screen and (max-width: 1023px) {
-    .banner {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        &__heading {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-        }
-        &__desc {
-            font-size: 1.6rem;
-        }
-        &__buttons > .btn {
-            font-size: 1.4rem;
-        }
-    }
-    .category {
-        &__item {
-            width: calc(50% - 22.5px);
-            margin-bottom: 2.5rem;
-        }
-    }
-    .feature {
-        padding-top: 10rem;
-        &__item {
-            flex-direction: column;
-            margin-bottom: 8rem;
-            &:nth-child(even) {
-                flex-direction: column;
-                .feature__info {
-                    padding: 0;
-                }
-            }
-            &:nth-child(odd) .feature__info {
-                padding: 0;
-            }
-        }
-        &__image,
-        &__info {
-            width: 100%;
-        }
-        &__image img {
-            margin: 0 auto 5rem;
-        }
-    }
-    .partner {
-        &__title {
-            padding-bottom: 4rem;
-            margin-bottom: 4rem;
-        }
-    }
-}
-//Moblie
-@media screen and (max-width: 740px) {
-    .header {
-        &__menu-list {
-            display: none;
-        }
-    }
-    .category {
-        &__item {
-            width: 100%;
-            margin-bottom: 2.5rem;
-        }
-        &__image {
-            height: 15rem;
-        }
-    }
-    .partner {
-        margin-bottom: 5rem;
-        &__list {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        &__item {
-            width: 50%;
-            margin-bottom: 2rem;
-            img {
-                margin: 0 auto;
-            }
-        }
-    }
-    .feature {
-        &__img {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-        &__title {
-            font-size: 3rem;
-        }
-    }
-    .connect {
-        margin-bottom: 5rem;
-        &__list {
-            flex-wrap: wrap;
-        }
-        &__item {
-            width: calc(50% - 1rem);
-            margin-bottom: 2rem;
-        }
-    }
-    .subscribe {
-        &__container {
-            flex-direction: column;
-        }
-        &__title {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-        &__info {
-            width: 100%;
-        }
-    }
-    .footer {
-        &__container {
-            flex-wrap: wrap;
-        }
-        &__item {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-    }
-}
-@media screen and (max-width: 479px) {
-    .banner {
-        &__heading {
-            font-size: 3rem;
-        }
-        &__buttons > .btn {
-            font-size: 1.2rem;
-        }
-    }
-}
+// @media screen and (max-width: 1023px) {
+//     .banner {
+//         padding-top: 5rem;
+//         padding-bottom: 5rem;
+//         &__heading {
+//             font-size: 4rem;
+//             margin-bottom: 2rem;
+//         }
+//         &__desc {
+//             font-size: 1.6rem;
+//         }
+//         &__buttons > .btn {
+//             font-size: 1.4rem;
+//         }
+//     }
+//     .category {
+//         &__item {
+//             width: calc(50% - 22.5px);
+//             margin-bottom: 2.5rem;
+//         }
+//     }
+//     .feature {
+//         padding-top: 10rem;
+//         &__item {
+//             flex-direction: column;
+//             margin-bottom: 8rem;
+//             &:nth-child(even) {
+//                 flex-direction: column;
+//                 .feature__info {
+//                     padding: 0;
+//                 }
+//             }
+//             &:nth-child(odd) .feature__info {
+//                 padding: 0;
+//             }
+//         }
+//         &__image,
+//         &__info {
+//             width: 100%;
+//         }
+//         &__image img {
+//             margin: 0 auto 5rem;
+//         }
+//     }
+//     .partner {
+//         &__title {
+//             padding-bottom: 4rem;
+//             margin-bottom: 4rem;
+//         }
+//     }
+// }
+// //Moblie
+// @media screen and (max-width: 740px) {
+//     .header {
+//         &__menu-list {
+//             display: none;
+//         }
+//     }
+//     .category {
+//         &__item {
+//             width: 100%;
+//             margin-bottom: 2.5rem;
+//         }
+//         &__image {
+//             height: 15rem;
+//         }
+//     }
+//     .partner {
+//         margin-bottom: 5rem;
+//         &__list {
+//             flex-wrap: wrap;
+//             justify-content: center;
+//         }
+//         &__item {
+//             width: 50%;
+//             margin-bottom: 2rem;
+//             img {
+//                 margin: 0 auto;
+//             }
+//         }
+//     }
+//     .feature {
+//         &__img {
+//             width: 100%;
+//             margin-bottom: 2rem;
+//         }
+//         &__title {
+//             font-size: 3rem;
+//         }
+//     }
+//     .connect {
+//         margin-bottom: 5rem;
+//         &__list {
+//             flex-wrap: wrap;
+//         }
+//         &__item {
+//             width: calc(50% - 1rem);
+//             margin-bottom: 2rem;
+//         }
+//     }
+//     .subscribe {
+//         &__container {
+//             flex-direction: column;
+//         }
+//         &__title {
+//             width: 100%;
+//             margin-bottom: 2rem;
+//         }
+//         &__info {
+//             width: 100%;
+//         }
+//     }
+//     .footer {
+//         &__container {
+//             flex-wrap: wrap;
+//         }
+//         &__item {
+//             width: 100%;
+//             margin-bottom: 2rem;
+//         }
+//     }
+// }
+// @media screen and (max-width: 479px) {
+//     .banner {
+//         &__heading {
+//             font-size: 3rem;
+//         }
+//         &__buttons > .btn {
+//             font-size: 1.2rem;
+//         }
+//     }
+// }
